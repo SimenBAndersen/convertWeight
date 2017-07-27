@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weight Converter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+			color: #FFF;
+			background-color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-6 offset-md-3 text-center">
+			<h1 class="my-4">Weight Converter</h1>
+			<div class="form-group">
+				<input type="number" placeholder="Enter kilograms.." class="form-control form-control-lg" id="kgInput">
+			</div>
+			<div id="outputs">
+				<div class="card card-success">
+					<div class="card-block">
+						<h1>Pounds</h1>
+						<div id="lbsOutput">
+						</div>
+					</div>
+				</div>
+				<div class="card card-primary">
+					<div class="card-block">
+						<h1>Grams</h1>
+						<div id="gOutput">
+						</div>
+					</div>
+				</div>
+				<div class="card card-info">
+					<div class="card-block">
+						<h1>Ounces</h1>
+						<div id="ozOutput">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById('kgInput').addEventListener('input', function(e){
+			let kilograms = e.target.value;
+			document.getElementById('lbsOutput').innerHTML = kilograms*2.20462262;
+			document.getElementById('gOutput').innerHTML = kilograms*1000;
+			document.getElementById('ozOutput').innerHTML = kilograms*35.2739619;
+		});
+
+
+	</script>
+</body>
+</html>
